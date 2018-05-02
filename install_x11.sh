@@ -9,10 +9,7 @@
 
 sudo apt-get update 2>&1 | dialog --title "Updating package database..." --infobox "\nPlease wait...\n" 11 70
 
-dialog --title "Installing X11, LXDE-core and Chromium" --infobox "\nThise will take some time so please wait...\n" 11 70
-
-wget https://github.com/kusti8/chromium-build/releases/download/netflix-1.0.0/chromium-browser_56.0.2924.84-0ubuntu0.14.04.1.1011.deb
-sudo dpkg -i chromium-browser_56.0.2924.84-0ubuntu0.14.04.1.1011.deb
+dialog --title "Installing X11, LXDE-core and Chromium(Netflix)" --infobox "\nThise will take some time so please wait...\n" 11 70
 
 sudo apt-get -y install lxde-core xserver-xorg xinit fbi libinput-dev
 if [ $? -gt 0 ]; then
@@ -20,6 +17,9 @@ dialog --title "Installing dependencies..." --infobox "\nPlease wait...\n" 11 70
 sudo apt-get -f --force-yes --yes install >/dev/null 2>&1
 fi
 dialog --title "Download and install" --infobox "\nDownloading launcher and installing\n" 11 70
+
+wget https://github.com/kusti8/chromium-build/releases/download/netflix-1.0.0/chromium-browser_56.0.2924.84-0ubuntu0.14.04.1.1011.deb
+sudo dpkg -i chromium-browser_56.0.2924.84-0ubuntu0.14.04.1.1011.deb
 
 wget -q https://github.com/david510c/x11-osmc/raw/master/install_x11.zip 2>&1
 unzip -q -o install_x11.zip 2>&1
