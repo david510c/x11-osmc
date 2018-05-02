@@ -18,9 +18,6 @@ sudo apt-get -f --force-yes --yes install >/dev/null 2>&1
 fi
 dialog --title "Download and install" --infobox "\nDownloading launcher and installing\n" 11 70
 
-wget https://github.com/kusti8/chromium-build/releases/download/netflix-1.0.0/chromium-browser_56.0.2924.84-0ubuntu0.14.04.1.1011.deb
-sudo dpkg -i chromium-browser_56.0.2924.84-0ubuntu0.14.04.1.1011.deb
-
 wget -q https://github.com/david510c/x11-osmc/raw/master/install_x11.zip 2>&1
 unzip -q -o install_x11.zip 2>&1
 chmod +x /home/osmc/x11-start/x_init.sh 2>&1
